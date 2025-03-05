@@ -18,11 +18,11 @@
   ];
 
   home.file = {
-    ".zshrc".source = ./dotfiles/zsh/zshrc;
     ".config/zsh/zsh-syntax-highlighting" = {
       source = ./dotfiles/zsh/zsh-syntax-highlighting;
       recursive = true;
     };
+    ".zshrc".source = ./dotfiles/zsh/zshrc;
   };
 
   home.sessionVariables = {
