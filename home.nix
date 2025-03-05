@@ -1,50 +1,55 @@
 { config, pkgs, ... }:
 
 {
-  home.username = "al";
-  home.homeDirectory = "/Users/al";
-  home.stateVersion = "24.05";
-  home.packages = [
-    pkgs.zsh
-    pkgs.htop
-    pkgs.eza
-    pkgs.bat
-    pkgs.fd
-    pkgs.git
-    pkgs.neovim
-    pkgs.zellij
-    pkgs.wget
-    pkgs.hyperfine
-  ];
+  home = {
+    username = "al";
+    homeDirectory = "/Users/al";
+    stateVersion = "24.05";
 
-  home.file = {
-    ".zshrc".source = ./dotfiles/zsh/zshrc;
+    packages = [
+      pkgs.htop
+      pkgs.eza
+      pkgs.bat
+      pkgs.fd
+      pkgs.git
+      pkgs.neovim
+      pkgs.zellij
+      pkgs.wget
+      pkgs.hyperfine
+    ];
+
+    sessionVariables = {
+      EDITOR = "nvim";
+    };
   };
 
-  home.sessionVariables = {
-    EDITOR = "nvim";
-  };
+  programs = {
+    home-manager = {
+      enable = true;
+    };
 
-  programs.git = {
-    enable = true;
-    userName = "alDuncanson";
-    userEmail = "alDuncanson@proton.me";
-  };
+    zsh = {
+      enable = true;
+      autosuggestion = {
+        enable = true;
+      };
+      syntaxHighlighting = {
+        enable = true;
+      };
+      shellAliases = {
+        find = "fd";
+        cat = "bat --theme=\"Catppuccin Frappe\"";
+        ls = "eza --icons=always";
+        lsl = "ls -l";
+        lsls = "lsl --total-size";
+        bench = "hyperfine";
+      };
+    };
 
-  programs.home-manager = {
-    enable = true;
-  };
-
-  programs.zsh = {
-    enable = true;
-
-    shellAliases = {
-      find = "fd";
-      cat = "bat --theme=\"Catppuccin Frappe\"";
-      ls = "eza --icons=always";
-      lsl = "ls -l";
-      lsls = "lsl --total-size";
-      bench = "hyperfine";
+    git = {
+      enable = true;
+      userName = "alDuncanson";
+      userEmail = "alDuncanson@proton.me";
     };
   };
 }
