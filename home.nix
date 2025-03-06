@@ -1,6 +1,8 @@
-{ config, pkgs, ... }:
-
 {
+  config,
+  pkgs,
+  ...
+}: {
   home = {
     username = "al";
     homeDirectory = "/Users/al";
@@ -74,12 +76,30 @@
             };
           };
 
+          lsp = {
+            formatOnSave = true;
+          };
+
+          options = {
+            tabstop = 4;
+          };
+
           theme = {
             enable = true;
             name = "catppuccin";
             style = "macchiato";
           };
 
+          ui = {
+            breadcrumbs.enable = true;
+            noice.enable = true;
+          };
+
+          utility = {
+            motion.leap.enable = true;
+          };
+
+          useSystemClipboard = true;
           statusline.lualine.enable = true;
           telescope.enable = true;
           autocomplete.nvim-cmp.enable = true;
