@@ -12,7 +12,6 @@
       pkgs.bat
       pkgs.fd
       pkgs.git
-      pkgs.neovim
       pkgs.zellij
       pkgs.wget
       pkgs.hyperfine
@@ -50,6 +49,47 @@
       enable = true;
       userName = "alDuncanson";
       userEmail = "alDuncanson@proton.me";
+    };
+
+    nvf = {
+      enable = true;
+
+      settings = {
+        vim = {
+          languages = {
+            enableLSP = true;
+            enableTreesitter = true;
+            enableFormat = true;
+
+            bash = {
+              enable = true;
+            };
+
+            nix = {
+              enable = true;
+            };
+
+            css = {
+              enable = true;
+            };
+          };
+
+          theme = {
+            enable = true;
+            name = "catppuccin";
+            style = "macchiato";
+          };
+
+          statusline.lualine.enable = true;
+          telescope.enable = true;
+          autocomplete.nvim-cmp.enable = true;
+          binds.whichKey.enable = true;
+          terminal.toggleterm = {
+            enable = true;
+            lazygit.enable = true;
+          };
+        };
+      };
     };
   };
 }
