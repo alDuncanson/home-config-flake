@@ -97,6 +97,17 @@
 
           utility = {
             motion.leap.enable = true;
+            yanky-nvim.enable = true;
+          };
+
+          visuals = {
+            cinnamon-nvim = {
+              enable = true;
+              setupOpts.keymaps = {
+                basic = true;
+                extra = true;
+              };
+            };
           };
 
           useSystemClipboard = true;
