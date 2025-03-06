@@ -28,7 +28,6 @@
     home-manager = {
       enable = true;
     };
-
     zsh = {
       enable = true;
       autosuggestion = {
@@ -46,60 +45,51 @@
         bench = "hyperfine";
       };
     };
-
     git = {
       enable = true;
       userName = "alDuncanson";
       userEmail = "alDuncanson@proton.me";
     };
-
     nvf = {
       enable = true;
-
       settings = {
         vim = {
+          filetree.nvimTree = {
+            enable = true;
+          };
           languages = {
             enableLSP = true;
             enableTreesitter = true;
             enableFormat = true;
-
             bash = {
               enable = true;
             };
-
             nix = {
               enable = true;
             };
-
             css = {
               enable = true;
             };
           };
-
           lsp = {
             formatOnSave = true;
           };
-
           options = {
             tabstop = 4;
           };
-
           theme = {
             enable = true;
             name = "catppuccin";
             style = "macchiato";
           };
-
           ui = {
             breadcrumbs.enable = true;
             noice.enable = true;
           };
-
           utility = {
             motion.leap.enable = true;
             yanky-nvim.enable = true;
           };
-
           visuals = {
             cinnamon-nvim = {
               enable = true;
@@ -108,8 +98,10 @@
                 extra = true;
               };
             };
+            fidget-nvim = {
+              enable = true;
+            };
           };
-
           useSystemClipboard = true;
           statusline.lualine.enable = true;
           telescope.enable = true;
