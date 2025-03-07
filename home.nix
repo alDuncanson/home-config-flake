@@ -14,7 +14,6 @@
       pkgs.bat
       pkgs.fd
       pkgs.git
-      pkgs.zellij
       pkgs.wget
       pkgs.hyperfine
     ];
@@ -136,6 +135,19 @@
           terminal.toggleterm = {
             enable = true;
             lazygit.enable = true;
+          };
+        };
+      };
+    };
+    zellij = {
+      enable = true;
+      enableZshIntegration = true;
+      settings = {
+        theme = "catppuccin-macchiato";
+        ui = {
+          pane_frames = {
+            rounded_corners = true;
+            hide_session_name = true;
           };
         };
       };
