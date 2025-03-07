@@ -15,19 +15,22 @@
     };
   };
 
-  outputs = { nixpkgs, home-manager, nvf, ... }:
-    let
-      system = "aarch64-darwin";
-      pkgs = nixpkgs.legacyPackages.${system};
-    in
-    {
-      homeConfigurations."al" = home-manager.lib.homeManagerConfiguration {
-        inherit pkgs;
+  outputs = {
+    nixpkgs,
+    home-manager,
+    nvf,
+    ...
+  }: let
+    system = "aarch64-darwin";
+    pkgs = nixpkgs.legacyPackages.${system};
+  in {
+    homeConfigurations."al" = home-manager.lib.homeManagerConfiguration {
+      inherit pkgs;
 
-        modules = [ 
-	  nvf.homeManagerModules.default
-	  ./home.nix
-	];
-      };
+      modules = [
+        nvf.homeManagerModules.default
+        ./home.nix
+      ];
     };
+  };
 }
