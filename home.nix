@@ -43,6 +43,10 @@
         lsls = "lsl --total-size";
         bench = "hyperfine";
       };
+      prezto = {
+        enable = true;
+        prompt.theme = "agnoster";
+      };
     };
     git = {
       enable = true;
