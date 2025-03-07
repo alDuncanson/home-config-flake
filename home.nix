@@ -11,7 +11,6 @@
     packages = [
       pkgs.htop
       pkgs.eza
-      pkgs.bat
       pkgs.fd
       pkgs.git
       pkgs.wget
@@ -31,6 +30,12 @@
     home-manager = {
       enable = true;
     };
+    bat = {
+      enable = true;
+      config = {
+        theme = "Catppuccin Macchiato";
+      };
+    };
     zsh = {
       enable = true;
       autosuggestion = {
@@ -41,7 +46,7 @@
       };
       shellAliases = {
         find = "fd";
-        cat = "bat --theme=\"Catppuccin Frappe\"";
+        cat = "bat";
         ls = "eza --icons=always";
         lsl = "ls -l";
         lsls = "lsl --total-size";
