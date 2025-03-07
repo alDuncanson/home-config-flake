@@ -89,10 +89,53 @@
             bash = {
               enable = true;
             };
+            css = {
+              enable = true;
+            };
+            dart = {
+              enable = true;
+              flutter-tools.enable = true;
+            };
+            gleam = {
+              enable = true;
+            };
+            go = {
+              enable = true;
+            };
+            html = {
+              enable = true;
+            };
+            kotlin = {
+              enable = true;
+            };
+            lua = {
+              enable = true;
+            };
+            markdown = {
+              enable = true;
+            };
             nix = {
               enable = true;
             };
-            css = {
+            python = {
+              enable = true;
+            };
+            ruby = {
+              enable = true;
+            };
+            rust = {
+              enable = true;
+            };
+            tailwind = {
+              enable = true;
+            };
+            ts = {
+              enable = true;
+            };
+            yaml = {
+              enable = true;
+            };
+            zig = {
               enable = true;
             };
           };
