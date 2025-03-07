@@ -21,10 +21,10 @@
     sessionVariables = {
       EDITOR = "nvim";
     };
-  };
 
-  home.file = {
-    ".config/ghostty/config".source = ./configs/ghostty/config;
+    file = {
+      ".config/ghostty/config".source = ./configs/ghostty/config;
+    };
   };
 
   programs = {
