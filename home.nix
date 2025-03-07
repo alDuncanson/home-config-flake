@@ -57,6 +57,28 @@
           filetree.nvimTree = {
             enable = true;
           };
+          keymaps = [
+            {
+              mode = "n"; # Normal mode
+              key = "<leader>wh";
+              action = "<C-w>h";
+            }
+            {
+              mode = "n";
+              key = "<leader>wj";
+              action = "<C-w>j";
+            }
+            {
+              mode = "n";
+              key = "<leader>wk";
+              action = "<C-w>k";
+            }
+            {
+              mode = "n";
+              key = "<leader>wl";
+              action = "<C-w>l";
+            }
+          ];
           languages = {
             enableLSP = true;
             enableTreesitter = true;
@@ -102,11 +124,15 @@
               enable = true;
             };
           };
+
           useSystemClipboard = true;
           statusline.lualine.enable = true;
           telescope.enable = true;
           autocomplete.nvim-cmp.enable = true;
-          binds.whichKey.enable = true;
+
+          binds.whichKey = {
+            enable = true;
+          };
           terminal.toggleterm = {
             enable = true;
             lazygit.enable = true;
