@@ -154,6 +154,7 @@
           };
           options = {
             tabstop = 4;
+            shiftwidth = 4;
           };
           theme = {
             enable = true;
