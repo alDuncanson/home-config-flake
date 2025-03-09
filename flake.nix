@@ -1,5 +1,5 @@
 {
-  description = "Al's Home Manager Configuration";
+  description = "Al's system flake";
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
