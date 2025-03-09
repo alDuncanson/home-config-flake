@@ -15,6 +15,7 @@
       pkgs.git
       pkgs.wget
       pkgs.hyperfine
+      pkgs.lua
     ];
 
     sessionVariables = {
