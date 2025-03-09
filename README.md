@@ -1,6 +1,6 @@
-# My environment flake
+# Bespoke dev environment nix flake
 
-This [Nix flake](https://wiki.nixos.org/wiki/Flakes) configuration is my
+This [Nix flake](https://wiki.nixos.org/wiki/Flakes) configuration realizes my
 declarative, portable, bespoke dev environment.
 
 ![my terminal](./assets/ghostty-screenshot.png)
