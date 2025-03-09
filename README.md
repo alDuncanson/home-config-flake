@@ -13,3 +13,4 @@ declarative, portable, bespoke dev environment.
 - User environment configuration:
   [Home manager](https://github.com/nix-community/home-manager)
 - Shell: [Zsh](https://www.zsh.org/)
+- Font: [MonoLisa](https://www.monolisa.dev/)
