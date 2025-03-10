@@ -13,6 +13,7 @@
       pkgs.wget
       pkgs.hyperfine
       pkgs.lua
+      pkgs.direnv
     ];
 
     sessionVariables = {
