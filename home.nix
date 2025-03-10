@@ -14,6 +14,7 @@
       pkgs.hyperfine
       pkgs.lua
       pkgs.direnv
+      pkgs.go
     ];
 
     sessionVariables = {
