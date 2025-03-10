@@ -1,8 +1,5 @@
+{ config, pkgs, ... }:
 {
-  config,
-  pkgs,
-  ...
-}: {
   home = {
     username = "al";
     homeDirectory = "/Users/al";
@@ -126,6 +123,9 @@
             };
             nix = {
               enable = true;
+              format = {
+                type = "nixfmt";
+              };
             };
             python = {
               enable = true;
