@@ -126,6 +126,9 @@
               format = {
                 type = "nixfmt";
               };
+              lsp = {
+                server = "nixd";
+              };
             };
             python = {
               enable = true;
