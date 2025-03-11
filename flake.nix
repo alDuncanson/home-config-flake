@@ -24,16 +24,26 @@
     }:
     let
       system = "aarch64-darwin";
-      pkgs = nixpkgs.legacyPackages.${system};
+
+      mkHomeConfig =
+        username:
+        let
+          pkgs = nixpkgs.legacyPackages.${system}; # Define pkgs here
+        in
+        home-manager.lib.homeManagerConfiguration {
+          inherit pkgs;
+          extraSpecialArgs = { inherit system username; };
+
+          modules = [
+            nvf.homeManagerModules.default
+            ./home.nix
+          ];
+        };
     in
     {
-      homeConfigurations."al" = home-manager.lib.homeManagerConfiguration {
-        inherit pkgs;
-
-        modules = [
-          nvf.homeManagerModules.default
-          ./home.nix
-        ];
+      homeConfigurations = {
+        al = mkHomeConfig "al";
+        al_duncanson = mkHomeConfig "al_duncanson";
       };
     };
 }

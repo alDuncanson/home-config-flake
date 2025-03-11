@@ -1,8 +1,8 @@
-{ config, pkgs, ... }:
+{ pkgs, username, ... }:
 {
   home = {
-    username = "al";
-    homeDirectory = "/Users/al";
+    username = username;
+    homeDirectory = "/Users/${username}";
     stateVersion = "24.05";
 
     packages = [
