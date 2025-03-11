@@ -79,7 +79,7 @@
           };
           keymaps = [
             {
-              mode = "n"; # Normal mode
+              mode = "n";
               key = "<leader>wh";
               action = "<C-w>h";
             }
