@@ -5,16 +5,16 @@
     homeDirectory = "/Users/${username}";
     stateVersion = "24.05";
 
-    packages = [
-      pkgs.htop
-      pkgs.eza
-      pkgs.fd
-      pkgs.git
-      pkgs.wget
-      pkgs.hyperfine
-      pkgs.lua
-      pkgs.direnv
-      pkgs.go
+    packages = with pkgs; [
+      htop
+      eza
+      fd
+      git
+      wget
+      hyperfine
+      lua
+      go
+      fh
     ];
 
     sessionVariables = {
@@ -40,6 +40,9 @@
       enable = true;
       enableZshIntegration = true;
       nix-direnv.enable = true;
+      config = {
+        global.hide_env_diff = true;
+      };
     };
     zsh = {
       enable = true;
