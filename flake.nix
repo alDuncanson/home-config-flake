@@ -28,7 +28,7 @@
       mkHomeConfig =
         username:
         let
-          pkgs = nixpkgs.legacyPackages.${system}; # Define pkgs here
+          pkgs = nixpkgs.legacyPackages.${system};
         in
         home-manager.lib.homeManagerConfiguration {
           inherit pkgs;
