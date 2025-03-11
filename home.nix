@@ -173,6 +173,7 @@
             enable = true;
             name = "catppuccin";
             style = "macchiato";
+            transparent = true;
           };
           ui = {
             breadcrumbs.enable = true;
