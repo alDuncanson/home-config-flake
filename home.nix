@@ -15,6 +15,7 @@
       lua
       go
       fh
+      slides
     ];
 
     sessionVariables = {
