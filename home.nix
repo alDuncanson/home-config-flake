@@ -24,6 +24,10 @@
     file = {
       ".config/ghostty/config".source = ./configs/ghostty/config;
     };
+
+    shell = {
+      enableZshIntegration = true;
+    };
   };
 
   programs = {
@@ -38,7 +42,6 @@
     };
     direnv = {
       enable = true;
-      enableZshIntegration = true;
       nix-direnv.enable = true;
       config = {
         global.hide_env_diff = true;
@@ -213,7 +216,6 @@
     };
     zellij = {
       enable = true;
-      enableZshIntegration = true;
       settings = {
         theme = "catppuccin-macchiato";
         ui = {
