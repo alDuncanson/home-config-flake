@@ -16,6 +16,8 @@
       go
       fh
       slides
+      gotop
+      fastfetch
     ];
 
     sessionVariables = {
@@ -158,6 +160,7 @@
             };
             ts = {
               enable = true;
+              format.type = "biome";
             };
             yaml = {
               enable = true;
