@@ -22,28 +22,18 @@
       yazi
     ];
 
-    sessionVariables = {
-      EDITOR = "nvim";
-    };
+    sessionVariables.EDITOR = "nvim";
 
-    file = {
-      ".config/ghostty/config".source = ./configs/ghostty/config;
-    };
+    file.".config/ghostty/config".source = ./configs/ghostty/config;
 
-    shell = {
-      enableZshIntegration = true;
-    };
+    shell.enableZshIntegration = true;
   };
 
   programs = {
-    home-manager = {
-      enable = true;
-    };
+    home-manager.enable = true;
     bat = {
       enable = true;
-      config = {
-        theme = "Catppuccin Macchiato";
-      };
+      config.theme = "Catppuccin Macchiato";
     };
     direnv = {
       enable = true;
@@ -54,12 +44,8 @@
     };
     zsh = {
       enable = true;
-      autosuggestion = {
-        enable = true;
-      };
-      syntaxHighlighting = {
-        enable = true;
-      };
+      autosuggestion.enable = true;
+      syntaxHighlighting.enable = true;
       shellAliases = {
         find = "fd";
         cat = "bat";
@@ -90,15 +76,11 @@
             };
           };
           autopairs.nvim-autopairs.enable = true;
-          binds.whichKey = {
-            enable = true;
-          };
+          binds.whichKey.enable = true;
           formatter.conform-nvim.enable = true;
           git = {
             enable = true;
-            gitsigns = {
-              enable = true;
-            };
+            gitsigns.enable = true;
           };
           hideSearchHighlight = true;
           languages = {
@@ -106,12 +88,8 @@
             enableLSP = true;
             enableTreesitter = true;
             enableFormat = true;
-            bash = {
-              enable = true;
-            };
-            css = {
-              enable = true;
-            };
+            bash.enable = true;
+            css.enable = true;
             dart = {
               enable = true;
               flutter-tools = {
@@ -119,57 +97,31 @@
                 color.enable = true;
               };
             };
-            go = {
-              enable = true;
-            };
-            html = {
-              enable = true;
-            };
-            kotlin = {
-              enable = true;
-            };
-            lua = {
-              enable = true;
-            };
-            markdown = {
-              enable = true;
-            };
+            go.enable = true;
+            html.enable = true;
+            kotlin.enable = true;
+            lua.enable = true;
+            markdown.enable = true;
             nix = {
               enable = true;
-              format = {
-                type = "nixfmt";
-              };
-              lsp = {
-                server = "nixd";
-              };
+              format.type = "nixfmt";
+              lsp.server = "nixd";
             };
-            python = {
-              enable = true;
-            };
-            ruby = {
-              enable = true;
-            };
-            tailwind = {
-              enable = true;
-            };
+            python.enable = true;
+            ruby.enable = true;
+            tailwind.enable = true;
             ts = {
               enable = true;
               format.type = "biome";
             };
-            yaml = {
-              enable = true;
-            };
-            zig = {
-              enable = true;
-            };
+            yaml.enable = true;
+            zig.enable = true;
           };
           lsp = {
             formatOnSave = true;
             trouble.enable = true;
           };
-          navigation = {
-            harpoon.enable = true;
-          };
+          navigation.harpoon.enable = true;
           options = {
             shiftwidth = 0;
             tabstop = 2;
