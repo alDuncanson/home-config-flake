@@ -113,6 +113,7 @@
             ts = {
               enable = true;
               format.type = "biome";
+              extraDiagnostics.types = [ ];
             };
             yaml.enable = true;
             zig.enable = true;
