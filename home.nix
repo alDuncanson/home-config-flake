@@ -1,7 +1,7 @@
 { pkgs, username, ... }:
 {
   home = {
-    username = username;
+    inherit username;
     homeDirectory = "/Users/${username}";
     stateVersion = "24.05";
 
@@ -18,6 +18,7 @@
       slides
       gotop
       fastfetch
+      ripgrep
     ];
 
     sessionVariables = {
@@ -80,31 +81,25 @@
       enable = true;
       settings = {
         vim = {
-          filetree.nvimTree = {
+          enableLuaLoader = true;
+          autocomplete.blink-cmp = {
+            enable = true;
+            sourcePlugins = {
+              ripgrep.enable = true;
+            };
+          };
+          autopairs.nvim-autopairs.enable = true;
+          binds.whichKey = {
             enable = true;
           };
-          keymaps = [
-            {
-              mode = "n";
-              key = "<leader>wh";
-              action = "<C-w>h";
-            }
-            {
-              mode = "n";
-              key = "<leader>wj";
-              action = "<C-w>j";
-            }
-            {
-              mode = "n";
-              key = "<leader>wk";
-              action = "<C-w>k";
-            }
-            {
-              mode = "n";
-              key = "<leader>wl";
-              action = "<C-w>l";
-            }
-          ];
+          formatter.conform-nvim.enable = true;
+          git = {
+            enable = true;
+            gitsigns = {
+              enable = true;
+            };
+          };
+          hideSearchHighlight = true;
           languages = {
             enableLSP = true;
             enableTreesitter = true;
@@ -117,10 +112,10 @@
             };
             dart = {
               enable = true;
-              flutter-tools.enable = true;
-            };
-            gleam = {
-              enable = true;
+              flutter-tools = {
+                enable = true;
+                color.enable = true;
+              };
             };
             go = {
               enable = true;
@@ -152,9 +147,6 @@
             ruby = {
               enable = true;
             };
-            rust = {
-              enable = true;
-            };
             tailwind = {
               enable = true;
             };
@@ -171,10 +163,21 @@
           };
           lsp = {
             formatOnSave = true;
+            trouble.enable = true;
+          };
+          navigation = {
+            harpoon.enable = true;
           };
           options = {
-            tabstop = 4;
-            shiftwidth = 4;
+            shiftwidth = 0;
+            tabstop = 2;
+            wrap = false;
+          };
+          statusline.lualine.enable = true;
+          telescope.enable = true;
+          terminal.toggleterm = {
+            enable = true;
+            lazygit.enable = true;
           };
           theme = {
             enable = true;
@@ -183,38 +186,11 @@
             transparent = true;
           };
           ui = {
+            borders.enable = true;
             breadcrumbs.enable = true;
             noice.enable = true;
           };
-          utility = {
-            motion.leap.enable = true;
-            yanky-nvim.enable = true;
-          };
-          visuals = {
-            cinnamon-nvim = {
-              enable = true;
-              setupOpts.keymaps = {
-                basic = true;
-                extra = true;
-              };
-            };
-            fidget-nvim = {
-              enable = true;
-            };
-          };
-
           useSystemClipboard = true;
-          statusline.lualine.enable = true;
-          telescope.enable = true;
-          autocomplete.nvim-cmp.enable = true;
-
-          binds.whichKey = {
-            enable = true;
-          };
-          terminal.toggleterm = {
-            enable = true;
-            lazygit.enable = true;
-          };
         };
       };
     };
