@@ -148,7 +148,10 @@
           utility = {
             preview.glow.enable = true;
             yanky-nvim.enable = true;
-            yazi-nvim.enable = true;
+            yazi-nvim = {
+              enable = true;
+              setupOpts.open_for_directories = true;
+            };
           };
           useSystemClipboard = true;
         };
