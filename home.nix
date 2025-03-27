@@ -19,6 +19,7 @@
       gotop
       fastfetch
       ripgrep
+      yazi
     ];
 
     sessionVariables = {
@@ -190,6 +191,9 @@
             breadcrumbs.enable = true;
             noice.enable = true;
           };
+          utility.preview.glow.enable = true;
+          utility.yanky-nvim.enable = true;
+          utility.yazi-nvim.enable = true;
           useSystemClipboard = true;
         };
       };
