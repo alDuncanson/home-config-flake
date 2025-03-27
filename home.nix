@@ -102,6 +102,7 @@
           };
           hideSearchHighlight = true;
           languages = {
+            enableExtraDiagnostics = true;
             enableLSP = true;
             enableTreesitter = true;
             enableFormat = true;
@@ -191,9 +192,11 @@
             breadcrumbs.enable = true;
             noice.enable = true;
           };
-          utility.preview.glow.enable = true;
-          utility.yanky-nvim.enable = true;
-          utility.yazi-nvim.enable = true;
+          utility = {
+            preview.glow.enable = true;
+            yanky-nvim.enable = true;
+            yazi-nvim.enable = true;
+          };
           useSystemClipboard = true;
         };
       };
