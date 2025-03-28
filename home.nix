@@ -64,6 +64,14 @@
       userName = "alDuncanson";
       userEmail = "alDuncanson@proton.me";
     };
+    lazygit = {
+      enable = true;
+      settings = {
+        os = {
+          editPreset = "nvim-remote";
+        };
+      };
+    };
     nvf = {
       enable = true;
       settings = {
