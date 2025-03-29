@@ -20,6 +20,7 @@
       fastfetch
       ripgrep
       yazi
+      glow
     ];
 
     sessionVariables.EDITOR = "nvim";
