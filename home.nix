@@ -110,7 +110,6 @@
               lsp.server = "nixd";
             };
             python.enable = true;
-            ruby.enable = true;
             tailwind.enable = true;
             ts = {
               enable = true;
