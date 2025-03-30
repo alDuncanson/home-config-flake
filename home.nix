@@ -115,7 +115,7 @@
             ts = {
               enable = true;
               format = {
-                type ="biome";
+                type = "biome";
                 package = pkgs.biome;
               };
             };
@@ -123,7 +123,11 @@
             zig.enable = true;
           };
           lsp = {
+            enable = true;
             formatOnSave = true;
+            lspconfig = {
+              enable = true;
+            };
             trouble.enable = true;
           };
           navigation.harpoon.enable = true;
