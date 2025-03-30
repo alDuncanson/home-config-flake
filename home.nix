@@ -100,13 +100,6 @@
             enableFormat = true;
             bash.enable = true;
             css.enable = true;
-            dart = {
-              enable = true;
-              flutter-tools = {
-                enable = true;
-                color.enable = true;
-              };
-            };
             go.enable = true;
             html.enable = true;
             kotlin.enable = true;
