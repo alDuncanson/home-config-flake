@@ -21,6 +21,7 @@
       ripgrep
       yazi
       glow
+      sendme
     ];
 
     sessionVariables.EDITOR = "nvim";
