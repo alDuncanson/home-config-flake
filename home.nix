@@ -113,8 +113,10 @@
             tailwind.enable = true;
             ts = {
               enable = true;
-              format.type = "biome";
-              extraDiagnostics.types = [ ];
+              format = {
+                type ="biome";
+                package = pkgs.biome;
+              };
             };
             yaml.enable = true;
             zig.enable = true;
