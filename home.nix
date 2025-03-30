@@ -22,6 +22,7 @@
       yazi
       glow
       sendme
+      angular-language-server
     ];
 
     sessionVariables.EDITOR = "nvim";
