@@ -26,6 +26,7 @@
       glow
       sendme
       angular-language-server
+      biome
     ];
 
     sessionVariables.EDITOR = "nvim";
@@ -107,10 +108,7 @@
             tailwind.enable = true;
             ts = {
               enable = true;
-              format = {
-                type = "biome";
-                package = pkgs.biome;
-              };
+              format.type = "biome";
             };
             yaml.enable = true;
             zig.enable = true;
@@ -124,6 +122,12 @@
               sources = {
                 angularls = ''
                   require'lspconfig'.angularls.setup{}
+                '';
+                biome = ''
+                  require'lspconfig'.biome.setup{}
+                '';
+                dockerls = ''
+                  require'lspconfig'.dockerls.setup{}
                 '';
               };
             };
