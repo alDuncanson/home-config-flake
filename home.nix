@@ -1,5 +1,8 @@
-{ pkgs, username, ... }:
 {
+  pkgs,
+  username,
+  ...
+}: {
   home = {
     inherit username;
     homeDirectory = "/Users/${username}";
@@ -80,12 +83,6 @@
       settings = {
         vim = {
           enableLuaLoader = true;
-          autocomplete.blink-cmp = {
-            enable = true;
-            sourcePlugins = {
-              ripgrep.enable = true;
-            };
-          };
           autopairs.nvim-autopairs.enable = true;
           binds.whichKey.enable = true;
           formatter.conform-nvim.enable = true;
@@ -105,11 +102,7 @@
             html.enable = true;
             lua.enable = true;
             markdown.enable = true;
-            nix = {
-              enable = true;
-              format.type = "nixfmt";
-              lsp.server = "nixd";
-            };
+            nix.enable = true;
             python.enable = true;
             tailwind.enable = true;
             ts = {
@@ -125,9 +118,16 @@
           lsp = {
             enable = true;
             formatOnSave = true;
+            lspSignature.enable = true;
             lspconfig = {
               enable = true;
+              sources = {
+                angularls = ''
+                  require'lspconfig'.angularls.setup{}
+                '';
+              };
             };
+            null-ls.enable = true;
             trouble.enable = true;
           };
           navigation.harpoon.enable = true;
