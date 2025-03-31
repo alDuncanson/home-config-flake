@@ -25,7 +25,6 @@
       yazi
       glow
       sendme
-      angular-language-server
       biome
     ];
 
@@ -86,7 +85,6 @@
           enableLuaLoader = true;
           autopairs.nvim-autopairs.enable = true;
           binds.whichKey.enable = true;
-          formatter.conform-nvim.enable = true;
           git = {
             enable = true;
             gitsigns.enable = true;
@@ -116,25 +114,7 @@
           lsp = {
             enable = true;
             formatOnSave = true;
-            lspSignature.enable = true;
-            lspconfig = {
-              enable = true;
-              sources = {
-                angularls = ''
-                  require'lspconfig'.angularls.setup{}
-                '';
-                biome = ''
-                  require'lspconfig'.biome.setup{}
-                '';
-                dockerls = ''
-                  require'lspconfig'.dockerls.setup{}
-                '';
-              };
-            };
-            null-ls.enable = true;
-            trouble.enable = true;
           };
-          navigation.harpoon.enable = true;
           options = {
             shiftwidth = 0;
             tabstop = 2;
