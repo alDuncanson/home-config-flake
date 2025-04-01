@@ -119,7 +119,10 @@
             };
             ts = {
               enable = true;
-              format.type = "biome";
+              format = {
+                type = "biome";
+                package = pkgs.biome;
+              };
             };
             yaml.enable = true;
             zig.enable = true;
