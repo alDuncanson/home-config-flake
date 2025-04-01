@@ -89,6 +89,9 @@
           };
           autopairs.nvim-autopairs.enable = true;
           binds.whichKey.enable = true;
+          formatter = {
+            conform-nvim.enable = true;
+          };
           git = {
             enable = true;
             gitsigns.enable = true;
