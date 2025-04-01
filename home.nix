@@ -130,6 +130,9 @@
           lsp = {
             enable = true;
             formatOnSave = true;
+            null-ls = {
+              enable = true;
+            };
           };
           options = {
             shiftwidth = 0;
