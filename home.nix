@@ -133,6 +133,7 @@
             null-ls = {
               enable = true;
             };
+            trouble.enable = true;
           };
           options = {
             shiftwidth = 0;
