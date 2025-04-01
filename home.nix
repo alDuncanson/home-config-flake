@@ -113,7 +113,10 @@
             markdown.enable = true;
             nix.enable = true;
             python.enable = true;
-            tailwind.enable = true;
+            tailwind = {
+              enable = true;
+              lsp.enable = true;
+            };
             ts = {
               enable = true;
               format.type = "biome";
