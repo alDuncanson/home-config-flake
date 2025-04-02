@@ -124,7 +124,6 @@
               enable = true;
               format = {
                 enable = true;
-                package = pkgs.biome;
                 type = "biome";
               };
             };
@@ -148,6 +147,7 @@
                   }
                 '';
                 docker = ''require'lspconfig'.dockerls.setup{}'';
+                biome = ''require'lspconfig'.biome.setup{}'';
               };
             };
             null-ls = {
