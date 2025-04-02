@@ -27,6 +27,8 @@
       sendme
       biome
       harper
+      docker-compose-language-service
+      dockerfile-language-server-nodejs
     ];
 
     sessionVariables.EDITOR = "nvim";
@@ -137,7 +139,14 @@
               sources = {
                 angular = ''require'lspconfig'.angularls.setup{}'';
                 harper = ''require('lspconfig').harper_ls.setup {}'';
-                dockercompose = ''require'lspconfig'.docker_compose_language_service.setup{}'';
+                dockercompose = ''
+                  require'lspconfig'.docker_compose_language_service.setup{
+                    filetypes = {
+                      'yaml',
+                      'yaml.docker-compose'
+                    }
+                  }
+                '';
                 docker = ''require'lspconfig'.dockerls.setup{}'';
               };
             };
