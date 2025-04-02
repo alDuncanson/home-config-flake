@@ -184,6 +184,7 @@
               globalStyle = "rounded";
             };
             breadcrumbs.enable = true;
+            fastaction.enable = true;
             noice.enable = true;
           };
           utility = {
