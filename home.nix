@@ -186,6 +186,7 @@
             breadcrumbs.enable = true;
             fastaction.enable = true;
             noice.enable = true;
+            colorizer.enable = true;
           };
           utility = {
             preview.glow.enable = true;
