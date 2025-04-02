@@ -179,7 +179,10 @@
             transparent = true;
           };
           ui = {
-            borders.enable = true;
+            borders = {
+              enable = true;
+              globalStyle = "rounded";
+            };
             breadcrumbs.enable = true;
             noice.enable = true;
           };
