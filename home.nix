@@ -26,6 +26,7 @@
       glow
       sendme
       biome
+      harper
     ];
 
     sessionVariables.EDITOR = "nvim";
@@ -120,8 +121,9 @@
             ts = {
               enable = true;
               format = {
-                type = "biome";
+                enable = true;
                 package = pkgs.biome;
+                type = "biome";
               };
             };
             yaml.enable = true;
@@ -130,8 +132,23 @@
           lsp = {
             enable = true;
             formatOnSave = true;
+            lspconfig = {
+              enable = true;
+              sources = {
+                angular = ''require'lspconfig'.angularls.setup{}'';
+                harper = ''require('lspconfig').harper_ls.setup {}'';
+                dockercompose = ''require'lspconfig'.docker_compose_language_service.setup{}'';
+                docker = ''require'lspconfig'.dockerls.setup{}'';
+              };
+            };
             null-ls = {
               enable = true;
+              setupOpts = {
+                debug = true;
+                sources = {
+                  biome = pkgs.lib.generators.mkLuaInline ''require("null-ls").builtins.formatting.biome'';
+                };
+              };
             };
             trouble.enable = true;
           };
