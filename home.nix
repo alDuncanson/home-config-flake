@@ -150,15 +150,6 @@
                 biome = ''require'lspconfig'.biome.setup{}'';
               };
             };
-            null-ls = {
-              enable = true;
-              setupOpts = {
-                debug = true;
-                sources = {
-                  biome = pkgs.lib.generators.mkLuaInline ''require("null-ls").builtins.formatting.biome'';
-                };
-              };
-            };
             trouble.enable = true;
           };
           options = {
