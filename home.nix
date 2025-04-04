@@ -2,7 +2,8 @@
   pkgs,
   username,
   ...
-}: {
+}:
+{
   home = {
     inherit username;
     homeDirectory = "/Users/${username}";
@@ -114,7 +115,10 @@
             html.enable = true;
             lua.enable = true;
             markdown.enable = true;
-            nix.enable = true;
+            nix = {
+              enable = true;
+              format.type = "nixfmt";
+            };
             python.enable = true;
             tailwind = {
               enable = true;
