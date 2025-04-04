@@ -16,6 +16,7 @@
       git
       wget
       hyperfine
+      tree
       lua
       go
       fh
