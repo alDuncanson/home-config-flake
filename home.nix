@@ -17,6 +17,7 @@
       wget
       hyperfine
       tree
+      asciinema
       lua
       go
       fh
