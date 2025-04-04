@@ -205,6 +205,7 @@
             hide_session_name = true;
           };
         };
+        on_force_close = "quit";
       };
     };
   };
