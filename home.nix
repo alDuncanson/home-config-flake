@@ -32,6 +32,7 @@
       harper
       docker-compose-language-service
       dockerfile-language-server-nodejs
+      svelte-language-server
     ];
 
     sessionVariables.EDITOR = "nvim";
@@ -157,6 +158,7 @@
                 '';
                 docker = ''require'lspconfig'.dockerls.setup{}'';
                 biome = ''require'lspconfig'.biome.setup{}'';
+                svelte = ''require'lspconfig'.svelte.setup{}'';
               };
             };
             trouble.enable = true;
