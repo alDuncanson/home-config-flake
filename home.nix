@@ -33,6 +33,10 @@
       docker-compose-language-service
       dockerfile-language-server-nodejs
       svelte-language-server
+      nodePackages.aws-cdk
+      nodejs
+      nodePackages."@angular/cli"
+      awscli2
     ];
 
     sessionVariables.EDITOR = "nvim";
