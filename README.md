@@ -7,8 +7,8 @@ declarative, portable, bespoke dev environment.
 
 - Terminal emulator: [Ghostty](https://ghostty.org/)
 - Terminal multiplexer and session manager: [Zellij](https://zellij.dev/)
-- Text editor: [Neovim](https://neovim.io/) configured with
-  [nvf](https://github.com/NotAShelf/nvf)
+- Text editor: [Neovim](https://neovim.io/)
+- Neovim configuration framework: [nvf](https://github.com/NotAShelf/nvf)
 - Themes: [Catppuccin](https://catppuccin.com/)
 - User environment configuration:
   [Home manager](https://github.com/nix-community/home-manager)
