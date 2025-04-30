@@ -109,10 +109,6 @@
           };
           git = {
             enable = true;
-            gitsigns = {
-              enable = true;
-              codeActions.enable = true;
-            };
           };
           hideSearchHighlight = true;
           languages = {
