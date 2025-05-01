@@ -100,7 +100,7 @@
           enableLuaLoader = true;
           autocomplete = {
             enableSharedCmpSources = true;
-            # blink-cmp.enable = true;
+            blink-cmp.enable = true;
           };
           autopairs.nvim-autopairs.enable = true;
           binds.whichKey.enable = true;
