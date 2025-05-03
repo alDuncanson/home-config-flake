@@ -97,6 +97,12 @@
       enable = true;
       settings = {
         vim = {
+          assistant = {
+            copilot = {
+              enable = true;
+              cmp.enable = true;
+            };
+          };
           enableLuaLoader = true;
           autocomplete = {
             enableSharedCmpSources = true;
