@@ -38,6 +38,7 @@
       nodePackages."@angular/cli"
       awscli2
       vscode-langservers-extracted
+      uv
     ];
 
     sessionVariables.EDITOR = "nvim";
