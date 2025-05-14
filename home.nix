@@ -39,6 +39,7 @@
       awscli2
       vscode-langservers-extracted
       uv
+      google-cloud-sdk
     ];
 
     sessionVariables.EDITOR = "nvim";
