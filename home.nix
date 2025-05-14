@@ -215,7 +215,9 @@
               setupOpts.open_for_directories = true;
             };
           };
-          useSystemClipboard = true;
+          clipboard = {
+            registers = [ "unnamedplus" ];
+          };
         };
       };
     };
