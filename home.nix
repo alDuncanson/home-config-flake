@@ -40,6 +40,7 @@
       vscode-langservers-extracted
       uv
       google-cloud-sdk
+      terraform
     ];
 
     sessionVariables.EDITOR = "nvim";
