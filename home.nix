@@ -41,6 +41,7 @@
       uv
       google-cloud-sdk
       terraform
+      docker
     ];
 
     sessionVariables.EDITOR = "nvim";
