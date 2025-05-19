@@ -121,7 +121,6 @@
           hideSearchHighlight = true;
           languages = {
             enableExtraDiagnostics = true;
-            enableLSP = true;
             enableTreesitter = true;
             enableFormat = true;
             bash.enable = true;
