@@ -35,6 +35,7 @@
       svelte-language-server
       nodePackages.aws-cdk
       nodejs
+      ollama
       nodePackages."@angular/cli"
       awscli2
       vscode-langservers-extracted
