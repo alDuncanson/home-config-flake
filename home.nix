@@ -41,7 +41,6 @@
       vscode-langservers-extracted
       uv
       google-cloud-sdk
-      terraform
       docker
     ];
 
