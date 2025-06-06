@@ -36,7 +36,6 @@
       nodePackages.aws-cdk
       nodejs
       ollama
-      
       awscli2
       vscode-langservers-extracted
       uv
@@ -44,12 +43,11 @@
       docker
       goose-cli
       gh
+      poetry
     ];
 
     sessionVariables.EDITOR = "nvim";
-
     file.".config/ghostty/config".source = ./configs/ghostty/config;
-
     shell.enableZshIntegration = true;
   };
 
