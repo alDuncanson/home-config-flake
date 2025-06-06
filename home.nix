@@ -43,6 +43,7 @@
       google-cloud-sdk
       docker
       goose-cli
+      gh
     ];
 
     sessionVariables.EDITOR = "nvim";
