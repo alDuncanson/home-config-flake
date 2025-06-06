@@ -44,6 +44,7 @@
       goose-cli
       gh
       poetry
+      terraform
     ];
 
     sessionVariables.EDITOR = "nvim";
