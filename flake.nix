@@ -33,8 +33,8 @@
         home-manager.lib.homeManagerConfiguration {
           inherit pkgs;
           extraSpecialArgs = { inherit system username; };
-
           modules = [
+            ({ config, ... }: { nixpkgs.config.allowUnfree = true; })
             nvf.homeManagerModules.default
             ./home.nix
           ];
