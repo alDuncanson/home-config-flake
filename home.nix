@@ -42,6 +42,7 @@
       uv
       google-cloud-sdk
       docker
+      goose-cli
     ];
 
     sessionVariables.EDITOR = "nvim";
