@@ -45,6 +45,7 @@
       gh
       poetry
       terraform
+      bun
     ];
 
     sessionVariables.EDITOR = "nvim";
