@@ -51,6 +51,7 @@
     sessionVariables.EDITOR = "nvim";
     file.".config/ghostty/config".source = ./configs/ghostty/config;
     shell.enableZshIntegration = true;
+    sessionPath = [ "$HOME/.local/bin" ];
   };
 
   programs = {
