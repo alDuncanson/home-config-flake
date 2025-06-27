@@ -8,18 +8,12 @@
       url = "github:nix-community/home-manager/release-25.05";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-
-    nvf = {
-      url = "github:notashelf/nvf";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
   };
 
   outputs =
     {
       nixpkgs,
       home-manager,
-      nvf,
       ...
     }:
     let
@@ -35,7 +29,6 @@
           extraSpecialArgs = { inherit system username; };
           modules = [
             ({ config, ... }: { nixpkgs.config.allowUnfree = true; })
-            nvf.homeManagerModules.default
             ./home.nix
           ];
         };

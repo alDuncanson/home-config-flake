@@ -69,9 +69,6 @@
     };
     zsh = {
       enable = true;
-      initContent = ''
-        eval "$(zellij setup --generate-auto-start zsh)"
-      '';
       autosuggestion.enable = true;
       syntaxHighlighting.enable = true;
       shellAliases = {
@@ -98,19 +95,6 @@
         os = {
           editPreset = "nvim-remote";
         };
-      };
-    };
-    zellij = {
-      enable = true;
-      settings = {
-        theme = "catppuccin-macchiato";
-        ui = {
-          pane_frames = {
-            rounded_corners = true;
-            hide_session_name = true;
-          };
-        };
-        on_force_close = "quit";
       };
     };
   };
