@@ -42,13 +42,11 @@
       terraform
       bun
       rustup
-      starship
     ];
 
     sessionVariables.EDITOR = "nvim";
     file.".config/ghostty/config".source = ./configs/ghostty/config;
     shell.enableZshIntegration = true;
-    sessionPath = ["$HOME/.local/bin"];
   };
 
   programs = {
@@ -57,6 +55,7 @@
       enable = true;
       config.theme = "Catppuccin Mocha";
     };
+    starship.enable = true;
     direnv = {
       enable = true;
       nix-direnv.enable = true;
@@ -66,6 +65,9 @@
     };
     zsh = {
       enable = true;
+      initContent = ''
+        eval "$(zellij setup --generate-auto-start zsh)"
+      '';
       autosuggestion.enable = true;
       syntaxHighlighting.enable = true;
       shellAliases = {
@@ -77,9 +79,6 @@
         bench = "hyperfine";
       };
     };
-    starship = {
-      enable = true;
-    };
     git = {
       enable = true;
       userName = "alDuncanson";
@@ -90,18 +89,12 @@
       settings = {
         vim = {
           assistant = {
-            copilot = {
-              enable = true;
-              cmp.enable = true;
-            };
           };
-          autocomplete.nvim-cmp.enable = true;
-          binds.whichKey = {
-            enable = true;
-          };
+          binds.whichKey.enable = true;
           git = {
             enable = true;
           };
+          hideSearchHighlight = true;
           languages = {
             enableExtraDiagnostics = true;
             enableTreesitter = true;
@@ -110,12 +103,6 @@
             nix.enable = true;
             python.enable = true;
             yaml.enable = true;
-          };
-          hideSearchHighlight = true;
-          ui = {
-            borders.enable = true;
-            breadcrumbs.enable = true;
-            noice.enable = true;
           };
           lsp = {
             enable = true;
@@ -134,17 +121,15 @@
             style = "macchiato";
             transparent = true;
           };
+          ui = {
+            borders.enable = true;
+            breadcrumbs.enable = true;
+            noice.enable = true;
+          };
           utility = {
-            motion = {
-              flash-nvim = {
-                enable = true;
-              };
-            };
             yazi-nvim = {
               enable = true;
-              setupOpts = {
-                open_for_directories = true;
-              };
+              setupOpts.open_for_directories = true;
             };
           };
         };
@@ -153,7 +138,7 @@
     zellij = {
       enable = true;
       settings = {
-        theme = "catppuccin-mocha";
+        theme = "catppuccin-macchiato";
         ui = {
           pane_frames = {
             rounded_corners = true;
