@@ -2,8 +2,7 @@
   pkgs,
   username,
   ...
-}:
-{
+}: {
   home = {
     inherit username;
     homeDirectory = "/Users/${username}";
@@ -30,10 +29,6 @@
       sendme
       biome
       harper
-      docker-compose-language-service
-      dockerfile-language-server-nodejs
-      svelte-language-server
-      nodePackages.aws-cdk
       nodejs
       ollama
       awscli2
@@ -47,19 +42,20 @@
       terraform
       bun
       rustup
+      starship
     ];
 
     sessionVariables.EDITOR = "nvim";
     file.".config/ghostty/config".source = ./configs/ghostty/config;
     shell.enableZshIntegration = true;
-    sessionPath = [ "$HOME/.local/bin" ];
+    sessionPath = ["$HOME/.local/bin"];
   };
 
   programs = {
     home-manager.enable = true;
     bat = {
       enable = true;
-      config.theme = "Catppuccin Macchiato";
+      config.theme = "Catppuccin Mocha";
     };
     direnv = {
       enable = true;
@@ -80,113 +76,43 @@
         lsls = "lsl --total-size";
         bench = "hyperfine";
       };
-      prezto = {
-        enable = true;
-        prompt.theme = "agnoster";
-      };
+    };
+    starship = {
+      enable = true;
     };
     git = {
       enable = true;
       userName = "alDuncanson";
       userEmail = "alDuncanson@proton.me";
     };
-    lazygit = {
-      enable = true;
-      settings = {
-        os = {
-          editPreset = "nvim-remote";
-        };
-      };
-    };
     nvf = {
       enable = true;
       settings = {
         vim = {
-          assistant = {
-            copilot = {
-              enable = true;
-              cmp.enable = true;
-            };
-          };
-          enableLuaLoader = true;
-          autocomplete = {
-            enableSharedCmpSources = true;
-            blink-cmp.enable = true;
-          };
-          autopairs.nvim-autopairs.enable = true;
-          binds.whichKey.enable = true;
-          formatter = {
-            conform-nvim.enable = true;
+          assistant.codecompanion-nvim.enable = true;
+          binds.whichKey = {
+            enable = true;
           };
           git = {
             enable = true;
           };
-          hideSearchHighlight = true;
           languages = {
             enableExtraDiagnostics = true;
             enableTreesitter = true;
             enableFormat = true;
-            bash.enable = true;
-            css.enable = true;
-            go.enable = true;
-            html.enable = true;
-            lua.enable = true;
             markdown.enable = true;
-            nix = {
-              enable = true;
-              format.type = "nixfmt";
-            };
+            nix.enable = true;
             python.enable = true;
-            tailwind = {
-              enable = true;
-              lsp.enable = true;
-            };
-            ts = {
-              enable = true;
-              format = {
-                enable = true;
-                type = "biome";
-              };
-            };
             yaml.enable = true;
-            zig.enable = true;
+          };
+          hideSearchHighlight = true;
+          ui = {
+            breadcrumbs.enable = true;
           };
           lsp = {
             enable = true;
             formatOnSave = true;
-            lspconfig = {
-              enable = true;
-              sources = {
-                angular = ''require'lspconfig'.angularls.setup{}'';
-                harper = ''require('lspconfig').harper_ls.setup {}'';
-                dockercompose = ''
-                  require'lspconfig'.docker_compose_language_service.setup{
-                    filetypes = {
-                      'yaml',
-                      'yaml.docker-compose'
-                    }
-                  }
-                '';
-                docker = ''require'lspconfig'.dockerls.setup{}'';
-                biome = ''require'lspconfig'.biome.setup{}'';
-                svelte = ''require'lspconfig'.svelte.setup{}'';
-                html = ''
-                  --Enable (broadcasting) snippet capability for completion
-                  local capabilities = vim.lsp.protocol.make_client_capabilities()
-                  capabilities.textDocument.completion.completionItem.snippetSupport = true
-
-                  require'lspconfig'.html.setup {
-                    capabilities = capabilities,
-                  }
-                '';
-              };
-            };
             trouble.enable = true;
-          };
-          options = {
-            shiftwidth = 0;
-            tabstop = 2;
-            wrap = false;
           };
           statusline.lualine.enable = true;
           telescope.enable = true;
@@ -200,26 +126,13 @@
             style = "macchiato";
             transparent = true;
           };
-          ui = {
-            borders = {
-              enable = true;
-              globalStyle = "rounded";
-            };
-            breadcrumbs.enable = true;
-            fastaction.enable = true;
-            noice.enable = true;
-            colorizer.enable = true;
-          };
           utility = {
-            preview.glow.enable = true;
-            yanky-nvim.enable = true;
             yazi-nvim = {
               enable = true;
-              setupOpts.open_for_directories = true;
+              setupOpts = {
+                open_for_directories = true;
+              };
             };
-          };
-          clipboard = {
-            registers = [ "unnamedplus" ];
           };
         };
       };
@@ -227,7 +140,7 @@
     zellij = {
       enable = true;
       settings = {
-        theme = "catppuccin-macchiato";
+        theme = "catppuccin-mocha";
         ui = {
           pane_frames = {
             rounded_corners = true;
