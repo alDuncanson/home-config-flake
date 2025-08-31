@@ -138,7 +138,7 @@
     zellij = {
       enable = true;
       settings = {
-        theme = "catppuccin-macchiato";
+        theme = "catppuccin-mocha";
         ui = {
           pane_frames = {
             rounded_corners = true;
@@ -146,6 +146,7 @@
           };
         };
         on_force_close = "quit";
+        show_startup_tips = false;
       };
     };
   };
