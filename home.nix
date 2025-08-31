@@ -98,8 +98,6 @@
         };
       };
     };
-<<<<<<< HEAD
-=======
     nvf = {
       enable = true;
       settings = {
@@ -239,6 +237,5 @@
         on_force_close = "quit";
       };
     };
->>>>>>> parent of 2807b22 (Remove nvf, temporarily... can't fix errors and mostly using VS Code and cli's now)
   };
 }
