@@ -89,7 +89,13 @@
       enable = true;
       settings = {
         vim = {
-          assistant.codecompanion-nvim.enable = true;
+          assistant = {
+            copilot = {
+              enable = true;
+              cmp.enable = true;
+            };
+          };
+          autocomplete.nvim-cmp.enable = true;
           binds.whichKey = {
             enable = true;
           };
@@ -107,7 +113,9 @@
           };
           hideSearchHighlight = true;
           ui = {
+            borders.enable = true;
             breadcrumbs.enable = true;
+            noice.enable = true;
           };
           lsp = {
             enable = true;
@@ -127,6 +135,11 @@
             transparent = true;
           };
           utility = {
+            motion = {
+              flash-nvim = {
+                enable = true;
+              };
+            };
             yazi-nvim = {
               enable = true;
               setupOpts = {
