@@ -88,8 +88,7 @@
       enable = true;
       settings = {
         vim = {
-          assistant = {
-          };
+          autocomplete.blink-cmp.enable = true;
           binds.whichKey.enable = true;
           git = {
             enable = true;
@@ -102,6 +101,7 @@
             markdown.enable = true;
             nix.enable = true;
             python.enable = true;
+            rust.enable = true;
             yaml.enable = true;
           };
           lsp = {
@@ -127,6 +127,7 @@
             noice.enable = true;
           };
           utility = {
+            motion.flash-nvim.enable = true;
             yazi-nvim = {
               enable = true;
               setupOpts.open_for_directories = true;
@@ -149,5 +150,6 @@
         show_startup_tips = false;
       };
     };
+    zed-editor.enable = true;
   };
 }
