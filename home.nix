@@ -42,6 +42,7 @@
       terraform
       bun
       rustup
+      act
     ];
 
     sessionVariables.EDITOR = "nvim";
@@ -150,6 +151,5 @@
         show_startup_tips = false;
       };
     };
-    zed-editor.enable = true;
   };
 }
