@@ -24,7 +24,10 @@
     homeConfigurations = {
       al = home-manager.lib.homeManagerConfiguration {
         pkgs = nixpkgs.legacyPackages.aarch64-darwin;
-        extraSpecialArgs = { system = "aarch64-darwin"; username = "al"; };
+        extraSpecialArgs = {
+          system = "aarch64-darwin";
+          username = "al";
+        };
         modules = [
           ({config, ...}: {nixpkgs.config.allowUnfree = true;})
           nvf.homeManagerModules.default

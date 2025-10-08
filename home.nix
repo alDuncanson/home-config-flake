@@ -66,9 +66,6 @@
     };
     zsh = {
       enable = true;
-      initContent = ''
-        eval "$(zellij setup --generate-auto-start zsh)"
-      '';
       autosuggestion.enable = true;
       syntaxHighlighting.enable = true;
       shellAliases = {
