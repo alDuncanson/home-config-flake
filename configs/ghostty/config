@@ -1,6 +1,3 @@
 font-family = MonoLisa Custom
-window-decoration = none
-window-width = 1000
-window-height = 1000
 confirm-close-surface = false
 quit-after-last-window-closed = true
