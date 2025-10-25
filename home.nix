@@ -54,7 +54,7 @@
     home-manager.enable = true;
     bat = {
       enable = true;
-      config.theme = "Catppuccin Mocha";
+      config.theme = "gruvbox-light";
     };
     starship.enable = true;
     direnv = {
@@ -115,8 +115,8 @@
           };
           theme = {
             enable = true;
-            name = "catppuccin";
-            style = "macchiato";
+            name = "gruvbox";
+            style = "light";
             transparent = true;
           };
           ui = {
@@ -137,7 +137,7 @@
     zellij = {
       enable = true;
       settings = {
-        theme = "catppuccin-mocha";
+        theme = "gruvbox-light";
         ui = {
           pane_frames = {
             rounded_corners = true;

@@ -1,3 +1,4 @@
 font-family = MonoLisa Custom
 confirm-close-surface = false
 quit-after-last-window-closed = true
+theme = Gruvbox Light
