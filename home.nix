@@ -68,6 +68,9 @@
       enable = true;
       autosuggestion.enable = true;
       syntaxHighlighting.enable = true;
+      initContent = ''
+        export PATH="$HOME/.local/bin:$PATH"
+      '';
       shellAliases = {
         find = "fd";
         cat = "bat";
@@ -132,20 +135,6 @@
             };
           };
         };
-      };
-    };
-    zellij = {
-      enable = true;
-      settings = {
-        theme = "gruvbox-light";
-        ui = {
-          pane_frames = {
-            rounded_corners = true;
-            hide_session_name = true;
-          };
-        };
-        on_force_close = "quit";
-        show_startup_tips = false;
       };
     };
   };
