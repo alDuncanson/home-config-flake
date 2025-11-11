@@ -43,6 +43,7 @@
       bun
       rustup
       act
+      pandoc
     ];
 
     sessionVariables.EDITOR = "nvim";
