@@ -44,6 +44,7 @@
       rustup
       act
       pandoc
+      tectonic
     ];
 
     sessionVariables.EDITOR = "nvim";
