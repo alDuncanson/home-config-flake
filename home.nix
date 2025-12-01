@@ -30,7 +30,6 @@
       biome
       harper
       nodejs
-      ollama
       awscli2
       vscode-langservers-extracted
       uv
@@ -45,6 +44,7 @@
       act
       pandoc
       tectonic
+      just
     ];
 
     sessionVariables.EDITOR = "nvim";
