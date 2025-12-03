@@ -84,14 +84,15 @@
     };
     git = {
       enable = true;
-      userName = "alDuncanson";
-      userEmail = "alDuncanson@proton.me";
+      settings.user = {
+        name = "alDuncanson";
+        email = "alDuncanson@proton.me";
+      };
     };
     nvf = {
       enable = true;
       settings = {
         vim = {
-          autocomplete.blink-cmp.enable = true;
           binds.whichKey.enable = true;
           git = {
             enable = true;
