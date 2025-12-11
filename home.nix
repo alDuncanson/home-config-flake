@@ -56,7 +56,7 @@
     home-manager.enable = true;
     bat = {
       enable = true;
-      config.theme = "gruvbox-light";
+      config.theme = "gruvbox-dark";
     };
     starship.enable = true;
     direnv = {
@@ -122,7 +122,7 @@
           theme = {
             enable = true;
             name = "gruvbox";
-            style = "light";
+            style = "dark";
             transparent = true;
           };
           ui = {
