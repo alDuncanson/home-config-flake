@@ -3,6 +3,8 @@
   username,
   ...
 }: {
+  system.primaryUser = username;
+
   homebrew = {
     enable = true;
     onActivation = {
@@ -19,8 +21,9 @@
     ];
   };
 
-  services.nix-daemon.enable = true;
-  nix.settings.experimental-features = ["nix-command" "flakes"];
+  nix.enable = false;
+
+  programs.zsh.enable = true;
 
   system.stateVersion = 5;
 }
