@@ -9,6 +9,13 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    nix-darwin = {
+      url = "github:LnL7/nix-darwin";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    nix-homebrew.url = "github:zhaofengli/nix-homebrew";
+
     nvf = {
       url = "github:notashelf/nvf";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -18,20 +25,44 @@
   outputs = {
     nixpkgs,
     home-manager,
+    nix-darwin,
+    nix-homebrew,
     nvf,
     ...
   }: {
-    homeConfigurations = {
-      al = home-manager.lib.homeManagerConfiguration {
-        pkgs = nixpkgs.legacyPackages.aarch64-darwin;
-        extraSpecialArgs = {
-          system = "aarch64-darwin";
+    darwinConfigurations = {
+      al = nix-darwin.lib.darwinSystem {
+        system = "aarch64-darwin";
+        specialArgs = {
           username = "al";
         };
         modules = [
-          ({config, ...}: {nixpkgs.config.allowUnfree = true;})
-          nvf.homeManagerModules.default
-          ./home.nix
+          nix-homebrew.darwinModules.nix-homebrew
+          {
+            nix-homebrew = {
+              enable = true;
+              user = "al";
+            };
+          }
+          home-manager.darwinModules.home-manager
+          {
+            home-manager = {
+              useGlobalPkgs = true;
+              useUserPackages = true;
+              extraSpecialArgs = {
+                username = "al";
+              };
+              users.al = {
+                imports = [
+                  nvf.homeManagerModules.default
+                  ./home.nix
+                ];
+              };
+            };
+            nixpkgs.config.allowUnfree = true;
+            users.users.al.home = "/Users/al";
+          }
+          ./darwin.nix
         ];
       };
     };
