@@ -46,6 +46,7 @@
       pandoc
       tectonic
       just
+      ngrok
     ];
 
     sessionVariables.EDITOR = "nvim";
