@@ -4,7 +4,7 @@ default:
 
 # Switch to the new configuration
 switch:
-    darwin-rebuild switch --flake .#al
+    nix run home-manager -- switch --flake .#al
 
 # Update flake inputs
 update:

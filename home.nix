@@ -33,12 +33,10 @@
       awscli2
       vscode-langservers-extracted
       uv
-      pipx
       google-cloud-sdk
       docker
       goose-cli
       gh
-      poetry
       terraform
       bun
       rustup
