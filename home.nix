@@ -34,6 +34,7 @@
       vscode-langservers-extracted
       uv
       google-cloud-sdk
+      gws
       docker
       goose-cli
       gh
